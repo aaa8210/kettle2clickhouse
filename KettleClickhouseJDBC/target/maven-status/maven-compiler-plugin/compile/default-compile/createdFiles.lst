@@ -1,0 +1,2 @@
+org\pentaho\di\core\database\OscarDatabaseMeta.class
+org\pentaho\di\core\database\ClickhouseDatabaseMeta.class
