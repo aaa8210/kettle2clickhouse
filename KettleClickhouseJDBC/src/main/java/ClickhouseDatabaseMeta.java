@@ -1,13 +1,11 @@
 package org.pentaho.di.core.database;
 import java.sql.ResultSet;
+
 import org.pentaho.di.core.Const;
 import org.pentaho.di.core.exception.KettleDatabaseException;
 import org.pentaho.di.core.plugins.DatabaseMetaPlugin;
 import org.pentaho.di.core.row.ValueMetaInterface;
 import org.pentaho.di.core.util.Utils;
-import org.pentaho.di.core.database.*;
-import net.jpountz.lz4.*;
-import ru.yandex.clickhouse.*;
 
 /**
  * DatabaseMeta-Clickhouse
@@ -19,7 +17,7 @@ public class ClickhouseDatabaseMeta extends BaseDatabaseMeta implements Database
 
     @Override
     public int[] getAccessTypeList() {
-        return new int[]{DatabaseMeta.TYPE_ACCESS_NATIVE, DatabaseMeta.TYPE_ACCESS_JNDI};
+        return new int[]{DatabaseMeta.TYPE_ACCESS_NATIVE, DatabaseMeta.TYPE_ACCESS_ODBC, DatabaseMeta.TYPE_ACCESS_JNDI};
     }
 
     @Override
